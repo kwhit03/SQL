@@ -1,0 +1,21 @@
+CREATE TABLE Calligraphy_Store (id INTEGER PRIMARY KEY, item TEXT, description TEXT, cost INTEGER, stock_inventory INTEGER, ratings INTEGER, sku INTEGER);
+INSERT INTO Calligraphy_Store values (1, "Ink", "Japanese Blue Black Stick", 35, 8, 4.5, 11253);
+INSERT INTO Calligraphy_Store values (2, "Ink", "Japanese Reddish Black Stick", 29, 13, 3.8, 11254);
+INSERT INTO Calligraphy_Store values (3, "Ink", "India Ink", 9, 121, 4.9, 11387);
+INSERT INTO Calligraphy_Store values (4, "Paper", "Cold Pressed Water Color Paper, 300lb", 18, 54, 3.3, 12131);
+INSERT INTO Calligraphy_Store values (5, "Paper", "Vellum, treated", 83, 7, 4.8, 12130);
+INSERT INTO Calligraphy_Store values (6, "Paper", "Hot Pressed Water Color Paper, 290lb", 21, 79, 4.3, 12132);
+INSERT INTO Calligraphy_Store values (7, "Gouache", "Saturn Red", 9, 18, 4.0, 12129);
+INSERT INTO Calligraphy_Store values (8, "Gouache", "Spring Leaf Green", 9, 18, 4.0, 12123);
+INSERT INTO Calligraphy_Store values (9, "Gouache", "Incan Gold", 13, 18, 4.2, 12130);
+INSERT INTO Calligraphy_Store values (10, "Gouache", "Peruvian Moonlight", 19,18, 4.7, 12127);
+INSERT INTO Calligraphy_Store values (11, "Nibs", "Broad Edged Brause", 2.25, 31, 4.3, 16121);
+INSERT INTO Calligraphy_Store values (12, "Nibs", "Broad Edged Hiro", 2.75, 22, 4.4, 16120);
+INSERT INTO Calligraphy_Store values (13, "Nibs", "Pointed Mitchell", 3, 1, 3.9, 16119);
+INSERT INTO Calligraphy_Store values (14, "Nibs", "Broad Edged Brause Left Handed", 2.25, 8, 4.3, 16126);
+INSERT INTO Calligraphy_Store values (15, "Gold Leaf", "24 Karat", 119, 3, 5, 18000);
+SELECT * FROM Calligraphy_Store;
+
+SELECT * FROM Calligraphy_Store ORDER BY cost;
+SELECT SUM(cost) FROM Calligraphy_Store; 
+SELECT * FROM Calligraphy_Store WHERE stock_inventory < 10;
