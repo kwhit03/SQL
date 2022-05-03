@@ -1,0 +1,23 @@
+Kickstarter Database - downloaded from Kaggle
+Then performed analytics using SQL 
+
+1. the number of projects per category, the average goal amount per category, the average amount pledged per category, 
+the percentage of projects that met their goal by category, 
+SELECT main_category AS "category",
+COUNT(main_category) AS "projects per category", 
+ROUND(AVG(goal)) AS "Avg Goal", 
+ROUND(AVG(pledged)) AS "Avg Pledged",
+ROUND(SUM(CASE WHEN state = "successful" THEN 1 ELSE 0 END)*100/COUNT(state)) AS "percent successful"
+FROM projects
+GROUP BY category;
+
+2.Top Ten Projects by money raised
+SELECT name, category, usd_pledged_real AS "raised"
+FROM projects
+ORDER BY usd_pledged_real DESC
+LIMIT 10;
+
+3.Types of Currency used, total projects in each currency and amount raised
+SELECT currency, COUNT(name) AS "# of projects", ROUND(SUM(pledged)) AS "Sum of currency pledged"
+FROM projects
+group by currency;
