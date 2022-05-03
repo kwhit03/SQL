@@ -1,7 +1,6 @@
-/* Put your data in here and query it! */
 /* Source:
-  https://www.kaggle.com/nasa/astronaut-yearbook
-*/
+  https://www.kaggle.com/nasa/astronaut-yearbook*/
+  
 CREATE TABLE astronauts(
    Name                TEXT PRIMARY KEY,
    Year                INTEGER,
